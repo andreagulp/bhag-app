@@ -1,21 +1,37 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import SEO from "../components/seo";
+import Thermometer from "../components/Thermometer";
+import "./index.css";
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({ data }) => (
+  <div className="App">
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+    <header className="App-header">
+      <Thermometer
+        theme="light"
+        value={data.site.siteMetadata.actuals}
+        max={data.site.siteMetadata.bhag}
+        format="Hrs"
+        size="large"
+        height="400"
+      />
+      <p className="App-message">{data.site.siteMetadata.title}</p>
+    </header>
+  </div>
+);
 
-export default IndexPage
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        actuals
+        bhag
+      }
+    }
+  }
+`;
+
+export default IndexPage;
