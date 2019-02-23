@@ -34,7 +34,7 @@ const styles = theme => ({
   block: {
     margin: "10px",
     display: "flex",
-    flexDirection: "column",
+    // flexDirection: "column",
     alignItems: "center",
     justifyContent: "center"
   }
