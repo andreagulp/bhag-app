@@ -3,7 +3,7 @@ module.exports = {
     title: `Have We Reached Our 200K BHAG Yet?`,
     description: `Go Go`,
     author: `kaizen`,
-    actuals: `6200`,
+    actuals: `5100`,
     bhag: `200000`
   },
   plugins: [
