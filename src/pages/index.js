@@ -58,7 +58,9 @@ const IndexPage = ({ data, classes }) => (
       </Grid>
       <Grid item xs={12} sm={6}>
         <div className={classes.block}>
-          <p className={classes.title}>{data.site.siteMetadata.title}</p>
+          <div>
+            <p className={classes.title}>{data.site.siteMetadata.title}</p>
+          </div>
           <div>
             <p className={classes.message}>
               <DaysLeft />
