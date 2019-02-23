@@ -32,7 +32,7 @@ const styles = theme => ({
     // textAlign: "left"
   },
   block: {
-    margin: "10px",
+    margin: "20px",
     display: "flex",
     // flexDirection: "column",
     alignItems: "center",
@@ -42,7 +42,7 @@ const styles = theme => ({
 
 const IndexPage = ({ data, classes }) => (
   <div className={classes.root}>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`kaizen`, `bhag`, `200k`]} />
     <Grid container spacing={24}>
       <Grid item xs={12} sm={6}>
         <div className={classes.block}>
