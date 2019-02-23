@@ -10,8 +10,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "KaizenBHAG",
-        short_name: "BHAG",
+        name: "bhag",
+        short_name: "bhag",
         start_url: "/",
         background_color: "#6b37bf",
         theme_color: "#6b37bf",
