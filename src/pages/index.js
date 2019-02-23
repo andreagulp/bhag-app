@@ -23,16 +23,20 @@ const styles = theme => ({
   },
   title: {
     // marginBottom: "1em",
+    margin: "0.5em",
     fontSize: "calc(20px + 2vmin)"
     // textAlign: "left"
   },
   message: {
-    // marginTop: "0.4em",
+    // margin: "0.2em",
+    margin: "0.5em",
     fontSize: "calc(8px + 2vmin)"
     // textAlign: "left"
   },
   block: {
-    margin: "20px",
+    // margin: "0.5em 1em 0.5em 1em ",
+    // padding: "1em",
+    // marginLeft: "10px",
     display: "flex",
     // flexDirection: "column",
     alignItems: "center",
@@ -58,14 +62,14 @@ const IndexPage = ({ data, classes }) => (
       </Grid>
       <Grid item xs={12} sm={6}>
         <div className={classes.block}>
-          <div>
-            <p className={classes.title}>{data.site.siteMetadata.title}</p>
+          <div className={classes.title}>
+            <p>{data.site.siteMetadata.title}</p>
           </div>
-          <div>
-            <p className={classes.message}>
+          <div className={classes.message}>
+            <p>
               <DaysLeft />
             </p>
-            <p className={classes.message}>
+            <p>
               <Savings />
             </p>
           </div>
